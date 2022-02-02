@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
@@ -50,34 +50,32 @@ main {
     background-color: hsl(178, 100%, 50%);
     opacity: 0;
     transition: opacity ease-out 0.3s;
+    border-radius: 10px;
 }
 
-.cube-overlay:hover {
+.cube-overlay:hover, .cube-overlay:focus-visible{
     cursor: pointer;
     opacity: 0.5;
 }
 
-.cube:hover {
-    filter: hue-rotate(355deg);
-}
-
-h1, p, .info-container, hr, .author {
+.title, .title-p, .info-container, .line, .author {
     margin: 0px 20px 20px;
 }
 
-h1 {
+.title {
     color: white;
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-}
-
-h1:hover {
-    color:hsl(178, 100%, 50%);
+    display: block;
     transition: color ease-out 0.3s;
 }
 
-p, span {
+.title:hover, .title:focus-visible {
+    color:hsl(178, 100%, 50%);
+}
+
+p, .name {
     font-size: 18px;
 }
 
@@ -86,7 +84,7 @@ p, .time-container {
     font-weight: 300;
 }
 
-.eth-container span, .time-container span{
+.eth-container p, .time-container p{
     margin-left: 5px;
 }
 
@@ -107,7 +105,7 @@ p, .time-container {
     align-items: center;
 }
 
-hr {
+.line {
     border: solid 0.5px hsl(215, 32%, 27%);
     height: 0;
 }
@@ -134,6 +132,6 @@ hr {
     cursor: pointer;
 }
 
-.name:hover {
+.name:hover, .name:focus-visible{
     color:hsl(178, 100%, 50%);
 }
