@@ -56,27 +56,21 @@ a {
 
 /*Header*/
 
-.cube-container {
-    border-radius: 8px;
+.cube-container, .cube, .cube-overlay {
     width: 278px;
     height: 278px;
-    position: relative;
+    border-radius: 8px;
 }
 
-.cube {
-    border-radius: 8px;
-    width: 278px;
-    height: 278px;
+.cube-container {
+    position: relative;
 }
 
 .cube-overlay {
     position: absolute;
-    width: 278px;
-    height: 278px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
     background: #00FFF8;
     top: 0;
     opacity: 0;
@@ -105,8 +99,6 @@ h1 a:hover, h1 a:focus-visible {
     color: #00FFF8;
 }
 
-/*Card*/
-
 header p {
     font-weight: 300;
     font-size: 18px;
@@ -114,6 +106,8 @@ header p {
     color: #8BACD9;
     margin-bottom: 16px;
 }
+
+/*Card details*/
 
 .info-container {
     display: flex;
@@ -177,4 +171,44 @@ header p {
 
 .author a:hover, .author a:focus-visible {
     color: #00FFF8;
+}
+
+@media only screen and (min-width: 768px) {
+    article {
+        width: 350px;
+        height: 596px;
+        padding: 24px 24px 32px;
+    }
+
+    /*Header*/
+
+    .cube-container, .cube, .cube-overlay {
+        width: 302px;
+        height: 302px;
+    }
+
+    h1 {
+        margin-bottom: 16px;
+    }
+
+    header p {
+        margin-bottom: 24px;
+    }
+
+    /*Card details*/
+
+    .info-container p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .line {
+        width: 302px;
+        margin: 24px 0 16px;
+    }
+
+    .author p {
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
